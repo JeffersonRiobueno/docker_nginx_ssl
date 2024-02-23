@@ -1,0 +1,16 @@
+version: "3"
+services:
+  bt_wt:
+    image: 'IMAGEN'
+    expose:
+      - "80"
+    environment:
+      - VIRTUAL_HOST=sub.dominio.com
+      - LETSENCRYPT_HOST=sub.dominio.com
+      - LETSENCRYPT_EMAIL=CORREO@gmail.com
+
+     
+networks:
+    default:
+        external:
+            name: cluster
